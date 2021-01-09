@@ -43,11 +43,11 @@ namespace Employees
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtZipCode = new System.Windows.Forms.TextBox();
-            this.txtState = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtStreetAddress = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
+            this.cmbStates = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSave
@@ -194,13 +194,6 @@ namespace Employees
             this.txtZipCode.Size = new System.Drawing.Size(435, 26);
             this.txtZipCode.TabIndex = 5;
             // 
-            // txtState
-            // 
-            this.txtState.Location = new System.Drawing.Point(172, 286);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(435, 26);
-            this.txtState.TabIndex = 4;
-            // 
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(172, 239);
@@ -229,17 +222,26 @@ namespace Employees
             this.txtEmailAddress.Size = new System.Drawing.Size(435, 26);
             this.txtEmailAddress.TabIndex = 7;
             // 
+            // cmbStates
+            // 
+            this.cmbStates.FormattingEnabled = true;
+            this.cmbStates.Location = new System.Drawing.Point(172, 290);
+            this.cmbStates.Name = "cmbStates";
+            this.cmbStates.Size = new System.Drawing.Size(435, 28);
+            this.cmbStates.TabIndex = 4;
+            this.cmbStates.Text = "Choose Employee\'s State";
+            // 
             // frmAddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(620, 636);
+            this.Controls.Add(this.cmbStates);
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtStreetAddress);
             this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtZipCode);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtFirstName);
@@ -258,6 +260,7 @@ namespace Employees
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAddEmployee";
             this.Text = "AddEmployee";
+            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,10 +282,10 @@ namespace Employees
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtZipCode;
-        private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtStreetAddress;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtEmailAddress;
+        private System.Windows.Forms.ComboBox cmbStates;
     }
 }

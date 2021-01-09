@@ -31,14 +31,19 @@ namespace Employees.Forms
                 {
                     MessageBox.Show("There are no Names in the Database\nTry Adding Some...", "Nothing in DB");
                 }
-                for (int i = 0; i < empNames.Count(); i++)
+                else
                 {
-                    cmbEmpName.Items.Add(empNames[i] + "\n");
-                }
-                string[] lines = File.ReadAllLines("D:/Employees/TextFiles/DepartmentNames.txt");
-                foreach (string line in lines)
-                {
-                    cmbDepartment.Items.Add(line);
+                    empNames.Sort();
+                    for (int i = 0; i < empNames.Count(); i++)
+                    {
+                        cmbEmpName.Items.Add(empNames[i]);                     
+                    }
+                    string[] lines = File.ReadAllLines("D:/Employees/TextFiles/DepartmentNames.txt");
+                    Array.Sort(lines);
+                    foreach (string line in lines)
+                    {
+                        cmbDepartment.Items.Add(line);
+                    }
                 }
             }
             catch(Exception ex)

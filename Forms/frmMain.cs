@@ -1,12 +1,5 @@
 ﻿using Employees.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Employees
@@ -31,6 +24,38 @@ namespace Employees
             frmAddDeptartment form = new frmAddDeptartment();
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void addSalaryFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddSalary form = new frmAddSalary();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void iconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.ArrangeIcons);
         }
     }
 }

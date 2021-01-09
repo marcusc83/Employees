@@ -33,9 +33,14 @@ namespace Employees
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAddEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemNewQueryForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDepartmentFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addDepartmentFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSalaryFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +61,7 @@ namespace Employees
             this.toolStripMenuItemAddEmployee,
             this.ToolStripMenuItemNewQueryForm,
             this.addDepartmentFormToolStripMenuItem,
+            this.addSalaryFormToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -74,24 +80,65 @@ namespace Employees
             this.ToolStripMenuItemNewQueryForm.Size = new System.Drawing.Size(193, 22);
             this.ToolStripMenuItemNewQueryForm.Text = "New Query Form";
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
             // addDepartmentFormToolStripMenuItem
             // 
             this.addDepartmentFormToolStripMenuItem.Name = "addDepartmentFormToolStripMenuItem";
             this.addDepartmentFormToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.addDepartmentFormToolStripMenuItem.Text = "Add Department Form";
             this.addDepartmentFormToolStripMenuItem.Click += new System.EventHandler(this.addDepartmentFormToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verticalToolStripMenuItem,
+            this.horizontalToolStripMenuItem,
+            this.cascadeToolStripMenuItem,
+            this.iconsToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // addSalaryFormToolStripMenuItem
+            // 
+            this.addSalaryFormToolStripMenuItem.Name = "addSalaryFormToolStripMenuItem";
+            this.addSalaryFormToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.addSalaryFormToolStripMenuItem.Text = "Add Salary Form";
+            this.addSalaryFormToolStripMenuItem.Click += new System.EventHandler(this.addSalaryFormToolStripMenuItem_Click);
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verticalToolStripMenuItem.Text = "Vertical";
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
+            // 
+            // horizontalToolStripMenuItem
+            // 
+            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
+            // 
+            // cascadeToolStripMenuItem
+            // 
+            this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cascadeToolStripMenuItem.Text = "Cascade";
+            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
+            // 
+            // iconsToolStripMenuItem
+            // 
+            this.iconsToolStripMenuItem.Name = "iconsToolStripMenuItem";
+            this.iconsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iconsToolStripMenuItem.Text = "Icons";
+            this.iconsToolStripMenuItem.Click += new System.EventHandler(this.iconsToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -119,6 +166,11 @@ namespace Employees
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addDepartmentFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addSalaryFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iconsToolStripMenuItem;
     }
 }
 

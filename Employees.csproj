@@ -104,11 +104,15 @@
     <Compile Include="SQLCommands\SQLAddEmployee.cs" />
     <Compile Include="SQLCommands\SQLAddSalary.cs" />
     <Compile Include="SQLCommands\SQLGetEmployeeFirstandLast.cs" />
+    <Compile Include="Validators\EmployerInfoValidator.cs" />
     <EmbeddedResource Include="Forms\frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddDeptartment.resx">
       <DependentUpon>frmAddDeptartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddSalary.resx">
+      <DependentUpon>frmAddSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -147,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TextFiles\DepartmentNames.txt" />
+    <Content Include="TextFiles\States.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

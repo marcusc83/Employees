@@ -33,7 +33,7 @@ namespace Employees.SQLCommands
                 {
                     while (myReader.Read())
                     {
-
+                        
                         first = myReader["firstName"].ToString();
                         last = myReader["lastName"].ToString();
                         name = first.Trim() + " " + last.Trim();

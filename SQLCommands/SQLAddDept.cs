@@ -11,23 +11,25 @@ namespace Employees.SQLCommands
         {
             try
             {
-                string getEmpId = string.Format("select empId from MyEmployees where firstname = '{0}' and lastName = '{1)'", first, last);
-                string addCommand = string.Format("Insert into Departments (department, MyEmployeesEmpId)" +
-                    "Values ('{0}','{1}')", dept, id);
-
+                string getEmpId = string.Format("select empId from MyEmployees where firstname = '{0}' and lastName = '{1}'", first, last);
+                
                 string connString = "Data Source=DESKTOP-OB29V6P;Initial Catalog=Employees.EmployeesDB;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connString);
-                SqlCommand addDept = new SqlCommand(addCommand, conn);
+                
                 SqlCommand getID = new SqlCommand(getEmpId, conn);
-                SqlDataReader myReader;
+               
                 conn.Open();
+                SqlDataReader myReader;
 
                 try
                 {
                     using (myReader = getID.ExecuteReader())
                     {
-                        string str = myReader["empId"].ToString();
-                        id = Convert.ToInt32(str);
+                        while (myReader.Read())
+                        {
+                            string str = myReader["empId"].ToString();
+                            id = Convert.ToInt32(str);
+                        }
                     }
                 }
                 catch(Exception ex)
@@ -36,6 +38,10 @@ namespace Employees.SQLCommands
                 }
                 try
                 {
+                    string addCommand = string.Format("Insert into Departments (department, MyEmployeesEmpId)" +
+                    "Values ('{0}','{1}')", dept, id);
+                    SqlCommand addDept = new SqlCommand(addCommand, conn);
+
                     myReader = addDept.ExecuteReader();
                     while (myReader.Read()) ;
                 }
