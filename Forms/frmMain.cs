@@ -57,5 +57,19 @@ namespace Employees
         {
             this.LayoutMdi(MdiLayout.ArrangeIcons);
         }
+
+        private void ToolStripMenuItemNewQueryForm_Click(object sender, EventArgs e)
+        {
+            QueryForm form = new QueryForm();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            QueryForm form = new QueryForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
